@@ -1,6 +1,6 @@
 {
-  "name": "debug",
-  "version": "4.4.3",
+  "name": "@iwoplaza/debug",
+  "version": "4.4.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/debug-js/debug.git"
@@ -53,6 +53,24 @@
   },
   "main": "./src/index.js",
   "browser": "./src/browser.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.mjs",
+      "default": "./src/index.js"
+    },
+    "./src/index.js": {
+      "import": "./src/index.mjs",
+      "default": "./src/index.js"
+    },
+    "./browser": {
+      "import": "./src/browser.mjs",
+      "default": "./src/browser.js"
+    },
+    "./src/browser.js": {
+      "import": "./src/browser.mjs",
+      "default": "./src/browser.js"
+    }
+  },
   "engines": {
     "node": ">=6.0"
   },
